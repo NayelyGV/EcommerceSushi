@@ -6,5 +6,8 @@ export interface Producto {
     imagen_url: string;
     stock: number;
     id: number;
+    fav: string;
+    categoria_id: number;
+    descuento_id: number;
   }
   

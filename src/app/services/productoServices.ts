@@ -26,6 +26,12 @@ export class ProductoService {
       return this.http.get<Producto[]>(this.apiUrl);
     }
     
+    //get products favoritos
+    getProductosFav(): Observable<Producto[]> {
+      return this.http.get<Producto[]>(this.apiUrl).pipe(
+        map((productos: Producto[]) => productos.filter(producto => parseInt(producto.fav) === 1))
+      );
+    }
     
 
   //get Producto by id
