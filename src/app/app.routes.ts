@@ -4,7 +4,15 @@ import { SignupComponent } from './components/auth/signup/signup.component';
 import { HomeComponent } from './components/home/home.component';
 
 export const routes: Routes = [
-  {path:'', component: HomeComponent},
+  {path:'', component: HomeComponent,
+  children:[
+    {
+      path:'productos-list',
+      title: 'Products List',
+      component: HomeComponent,
+    },
+  ]  
+},
   {path:'signin', component: SigninComponent},
   {path:'signup', component: SignupComponent},
 
