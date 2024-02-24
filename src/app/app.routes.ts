@@ -13,8 +13,9 @@ export const routes: Routes = [
       title: 'Products List',
       component: HomeComponent,
     },
-  ]  
+  ]
 },
+{path: 'home', component: HomeComponent},
 {path:'catalogo', component:catalogoComponent ,
   children:[
     {
@@ -22,7 +23,7 @@ export const routes: Routes = [
       title: 'Products List',
       component: catalogoComponent,
     },
-  ]  
+  ]
 },
   {path:'pedido', component: pedidoComponent},
   {path:'signin', component: SigninComponent},
