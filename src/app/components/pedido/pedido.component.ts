@@ -14,7 +14,7 @@ import { ProductoService } from '../../services/productoServices';
   styleUrl: './pedido.component.css',
   //changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class pedidoComponent implements OnInit {
+export class PedidoComponent implements OnInit {
   productos: Producto[] = [];
   cantidadString: string = "0"; // Inicializamos como una cadena
   cantidad: number = 0;
@@ -36,9 +36,9 @@ export class pedidoComponent implements OnInit {
       });
   }
 
-  
-  
-  
+
+
+
   //add products
 
   //delete products

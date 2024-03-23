@@ -4,13 +4,13 @@
 
 <!--MIS PEDIDOS-->
 
-<section class="text-gray-600 body-font px-14 py-8">
+<section class="text-gray-600 body-font px-14 py-8" style="min-height: 100vh;">
   <div class="container px-14 py-24 mx-auto">
     <h1 class="title-font sm:text-4xl text-3xl mb-12 font-medium text-gray-900" style="text-align: center; ">Mis pedidos
     </h1>
          <div class="w-1/5 p-4 auto-felx" *ngFor="let producto of productos">
     <div class="flex flex-wrap -m-2">
- 
+
         <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden" style="background-color:aliceblue; border-radius: 20px;">
           <img class="lg:h-48 md:h-36 w-full object-cover object-center" [src]="producto.imagen_url" alt="Imagen de {{ producto.nombre }}">
           <div class="p-6">
@@ -25,12 +25,12 @@
                   <button class="text-lg px-3 py-1 focus:outline-none" >+</button>
                 </div>
               </div>
-              
-              
-              
-              
-              
-              
+
+
+
+
+
+
              <!-- <span class="text-blue-500 inline-flex items-center">{{ producto.precio }} Bs.</span>-->
               <span class="text-gray-400 inline-flex items-center">Stock: {{ producto.stock }}</span>
             </div>

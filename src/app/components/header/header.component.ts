@@ -11,7 +11,7 @@ import { RouterLink } from '@angular/router';
   ],
   //template: `<p>header works!</p>`,
   templateUrl: './header.component.html',
-  styleUrl: './header.component.css',
+  styleUrls: ['./header.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HeaderComponent { }

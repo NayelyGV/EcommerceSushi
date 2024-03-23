@@ -9,7 +9,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   ],
   //template: `<p>footer works!</p>`,
   templateUrl: './footer.component.html',
-  styleUrl: './footer.component.css',
+  styleUrls: ['./footer.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FooterComponent { }

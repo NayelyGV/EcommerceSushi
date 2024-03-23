@@ -14,7 +14,7 @@ import { ProductoService } from '../../services/productoServices';
   styleUrl: './catalogo.component.css',
   //changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class catalogoComponent implements OnInit {
+export class CatalogoComponent implements OnInit {
   productos: Producto[] = [];
   cantidadString: string = "0"; // Inicializamos como una cadena
   cantidad: number = 0;
@@ -36,9 +36,9 @@ export class catalogoComponent implements OnInit {
       });
   }
 
-  
-  
-  
+
+
+
   //add products
 
   //delete products

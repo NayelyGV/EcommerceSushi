@@ -13,7 +13,7 @@ import { RouterLink } from '@angular/router';
   ],
   //template: `<p>home works!</p>`,
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css',
+  styleUrls: ['./home.component.css'],
   //changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HomeComponent implements OnInit {
@@ -43,9 +43,9 @@ export class HomeComponent implements OnInit {
         this.productosFav = response; // Asigna los productos a la propiedad productos
       });
   }
-  
-  
-  
+
+
+
   //add products
 
   //delete products

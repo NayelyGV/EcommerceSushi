@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Antonio:wght@100..700&family=Inter:wght@100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /*--body-color:rgba(244, 227, 206, 1);*/
+
+  --body-color:rgb(253, 8, 8);
+  --button-color: rgba(168, 182, 122, 1);
+  --color-white: rgba(250,250,250);
+  --text-color-second:rgba(38,37,37);
+  --first-color:rgb(142, 87, 224);
+  --first-shadow: rgba(244, 240, 227, 1);
+
+  --red-color:#ec6658;
+  --orange-color: #ed9045;
+  --box-color: #f4e3ce;
+  --nav-color: #222222;
+  --nav-icon: #000;
+  --logo-color: #000;
+
+  --text-color: #000000;
+  --color-white: #242526;
+
+  --icon-color: #050505;
+  --mode-color: #ccc;
+  --base-color: #F4E3CE;
+}
+
+body {
+  background-color: var(--body-color);
+  font-family: 'Inter', sans-serif;
+}
+
+h1 {
+  font-family: 'Anton', sans-serif;
+}
+
+h2 {
+  font-family: 'Antonio', sans-serif;
+}
+
+h3, p {
+  font-family: 'Inter', sans-serif;
+}
