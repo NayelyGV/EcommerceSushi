@@ -31,8 +31,9 @@ export class HomeComponent implements OnInit {
   getProductos(): void {
     this.productoService.getProductos()
       .subscribe(response => {
-        console.log(response); // Imprime los productos en la consola
-        this.productos = response; // Asigna los productos a la propiedad productos
+        console.log(response);
+        this.productos = response;
+        console.log('Productos cargados:', this.productos);
       });
   }
 
