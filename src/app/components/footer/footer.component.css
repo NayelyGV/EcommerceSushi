@@ -1,3 +1,26 @@
 :host {
   display: block;
 }
+
+footer {
+  background-color: var(--color-header);
+}
+
+
+/* Enlaces */
+a {
+  font-family: 'Anton', sans-serif;
+  color: var(--white-color);
+  font-size: 25px;
+}
+
+a:hover {
+  color: var(--orange-color);
+}
+
+/* Botón */
+button, .button {
+  font-family: 'Anton', sans-serif;
+  font-size: 25px;
+}
+

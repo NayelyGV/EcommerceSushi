@@ -1,0 +1,48 @@
+
+
+
+
+<!--MIS PEDIDOS-->
+
+<section class="text-gray-600 body-font px-14 py-8" style="min-height: 100vh;">
+  <div class="container px-14 py-24 mx-auto">
+    <h1 class="title-font sm:text-4xl text-3xl mb-12 font-medium text-gray-900" style="text-align: center; ">Mis pedidos
+    </h1>
+         <div class="w-1/5 p-4 auto-felx" *ngFor="let producto of productos">
+    <div class="flex flex-wrap -m-2">
+
+        <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden" style="background-color:aliceblue; border-radius: 20px;">
+          <img class="lg:h-48 md:h-36 w-full object-cover object-center" [src]="producto.imagen_url" alt="Imagen de {{ producto.nombre }}">
+          <div class="p-6">
+            <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">CATEGORÍA</h2>
+            <h1 class="title-font text-lg font-medium text-gray-900 mb-3">{{ producto.nombre }}</h1>
+            <p class="leading-relaxed mb-3">{{ producto.descripcion }}</p>
+            <div class="flex items-center justify-between">
+              <div class="flex justify-center">
+                <div class="flex items-center border border-gray-300 rounded-md" style="background-color: black;">
+                  <button class="text-lg px-3 py-1 focus:outline-none" style="background-color: black;">-</button>
+                  <input class="w-16 text-center" type="text" minlength="0" style="background-color: black;">
+                  <button class="text-lg px-3 py-1 focus:outline-none" >+</button>
+                </div>
+              </div>
+
+
+
+
+
+
+             <!-- <span class="text-blue-500 inline-flex items-center">{{ producto.precio }} Bs.</span>-->
+              <span class="text-gray-400 inline-flex items-center">Stock: {{ producto.stock }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+

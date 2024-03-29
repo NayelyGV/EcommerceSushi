@@ -1,3 +1,100 @@
 :host {
   display: block;
 }
+
+.home {
+  margin-top: 50px;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+h1,button {
+  font-family: var(--font-anton);
+  color: var(--text-color);
+}
+
+h2,label {
+  font-family: var(--font-antonio);
+  color: var(--text-color);
+}
+
+body, p, input, textarea{ /* Aplicas Inter a otros elementos */
+  font-family: var(--font-inter);
+}
+
+/* sección PRINCIPAL */
+.principal .container {
+  border-radius: 80px;
+  background-color: var(--red-color);
+}
+
+.principal h1 {
+  font-family: 'Anton', sans-serif;
+}
+
+.principal p {
+  font-family: 'Inter', sans-serif;
+}
+
+/* sección de FAVORITOS */
+.favoritos h1 {
+  font-family: 'Antonio', sans-serif;
+}
+
+.favoritos p {
+  font-family: 'Inter', sans-serif;
+}
+
+/*sección de CONTACTO Y MAPA
+.contactos h2, .contactos p {
+  font-family: 'Inter', sans-serif;
+}
+
+.contactos .bg-white {
+  background-color: var(--body-color);
+  border-radius: 20px;
+}
+
+.contactos button {
+  background-color: #008b8b;
+  border-radius: 10px;
+}
+
+*/
+
+
+/*CONTANTOS*/
+section.text-gray-600 {
+  color: var(--text-color);
+}
+
+
+.bg-white {
+  padding: 20px;
+  background-color: var(--first-shadow);
+}
+
+.lg\:w-1\/3.md\:w-1\/2.bg-white {
+  background-color: var(--body-color);
+}
+
+.bg-purple-500 {
+  background-color: var(--button-color);
+  color: var(--text-color);
+}
+
+.bg-purple-500:hover {
+  background-color: var(--hover-button);
+}
+
+.text-purple-500.leading-relaxed {
+  color: var(--orange-color);
+}
+
+/* Inputs y Textareas */
+.bg-white input:focus, .bg-white textarea:focus {
+  outline: none;
+}
+
+.bg-white input:hover, .bg-white textarea:hover {
+  border-color: var(--orange-color);
+}

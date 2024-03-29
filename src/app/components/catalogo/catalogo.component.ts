@@ -2,30 +2,30 @@ import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, OnInit  } from '@angular/core';
 import { Producto } from '../../models/producto';
 import { ProductoService } from '../../services/productoServices';
-import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-home',
+  selector: 'app-catalogo',
   standalone: true,
   imports: [
     CommonModule,
-    RouterLink,
   ],
   //template: `<p>home works!</p>`,
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css'],
+  templateUrl: './catalogo.component.html',
+  styleUrl: './catalogo.component.css',
   //changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class HomeComponent implements OnInit {
+export class CatalogoComponent implements OnInit {
   productos: Producto[] = [];
-  productosFav: Producto[] = [];
+  cantidadString: string = "0"; // Inicializamos como una cadena
+  cantidad: number = 0;
+
 
 
   constructor(private productoService: ProductoService) { }
 
   ngOnInit(): void {
     this.getProductos();
-    this.getProductosFav();
+
   }
 
   getProductos(): void {
@@ -36,17 +36,17 @@ export class HomeComponent implements OnInit {
       });
   }
 
-  getProductosFav(): void {
-    this.productoService.getProductosFav()
-      .subscribe(response => {
-        console.log(response); // Imprime los productos en la consola
-        this.productosFav = response; // Asigna los productos a la propiedad productos
-      });
-  }
 
 
 
   //add products
 
   //delete products
+
+
+
+
+
+
+
 }
