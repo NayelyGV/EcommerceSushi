@@ -11,7 +11,7 @@
     <div class="flex flex-wrap -m-4">
       <div class="w-1/3 p-4" *ngFor="let producto of productos">
         <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden" style="background-color:aliceblue; border-radius: 20px;">
-          <img class="lg:h-48 md:h-36 w-full object-cover object-center" [src]="producto.imagen_url" alt="Imagen de {{ producto.nombre }}">
+          <img class="lg:h-48 md:h-36 w-full object-cover object-center" [src]="producto.imagen" alt="Imagen de {{ producto.nombre }}">
           <div class="p-6">
             <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">{{ getCategoriaNombre(producto.categoria_id) }}</h2>
             <h1 class="title-font text-lg font-medium text-gray-900 mb-3">{{ producto.nombre }}</h1>
