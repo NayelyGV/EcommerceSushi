@@ -59,10 +59,6 @@ export class ProductoService {
   /** PUT: update the hero on the server */
   updateHero(hero: Producto): Observable<any> {
     return this.http.put(this.apiUrl, hero, this.httpOptions);
-  }
-
-
- 
-
+  };
 }
 

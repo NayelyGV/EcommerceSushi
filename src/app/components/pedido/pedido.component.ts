@@ -52,8 +52,24 @@ export class PedidoComponent implements OnInit {
       detpedido.cantidad -= 1;
     }
   }
-  }
 
+  }
+  getTheLastPedido(): void{
+
+  }
+  enviarPedido(): void {
+    // Obtener los valores de los campos del formulario
+    const nombre = (document.getElementById("nombre") as HTMLInputElement).value;
+    const producto = (document.getElementById("producto") as HTMLInputElement).value;
+  
+    // Construir la URL de WhatsApp con los datos del formulario
+    const url = "https://api.whatsapp.com/send?phone=69490587&text=" +
+              encodeURIComponent("Nombre: " + nombre + " " +
+                                 "Producto: " + producto + " ");
+  
+    // Abrir la URL en una nueva pestaña
+    window.open(url, "_blank");
+  }
   //add products
 
   //delete products
