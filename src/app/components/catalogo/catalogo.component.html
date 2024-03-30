@@ -18,7 +18,7 @@
             <p class="leading-relaxed mb-3">{{ producto.descripcion }}</p>
             <div class="flex items-center justify-between">
               <div class="flex justify-center">
-                <button class="inline-flex text-white bg-black border-0 py-2 px-6 focus:outline-none hover:bg-green-800 rounded-full text-lg">Comprar</button>
+                <button class="inline-flex text-white bg-black border-0 py-2 px-6 focus:outline-none hover:bg-green-800 rounded-full text-lg"(click)="agregarAlCarrito(producto.id)">Comprar</button>
               </div>
 
 
