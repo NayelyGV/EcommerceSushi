@@ -1,10 +1,8 @@
 // producto.model.ts
-export interface detPedido {
+export interface DetPedido {
     id: number;
     pedido_id: number;
     producto_id: number;
-    cantidad: number;
     subtotal: number;
-
+    cantidad: number;
   }
-  
