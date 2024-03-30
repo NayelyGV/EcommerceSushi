@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, OnInit  } from '@angular/core';
 import { Producto } from '../../models/producto';
 import { ProductoService } from '../../services/productoServices';
+import { CarritoService } from '../../services/carritoServices';
 
 @Component({
   selector: 'app-pedido',
@@ -18,10 +19,11 @@ export class PedidoComponent implements OnInit {
   productos: Producto[] = [];
   cantidadString: string = "0"; // Inicializamos como una cadena
   cantidad: number = 0;
+  productosCarrito: Producto[] = [];
 
 
 
-  constructor(private productoService: ProductoService) { }
+  constructor(private productoService: ProductoService, private carritoService: CarritoService) { }
 
   ngOnInit(): void {
     this.getProductos();
@@ -30,9 +32,9 @@ export class PedidoComponent implements OnInit {
 
   getProductos(): void {
     this.productoService.getProductos()
-      .subscribe(response => {
-        console.log(response); // Imprime los productos en la consola
-        this.productos = response; // Asigna los productos a la propiedad productos
+      .subscribe(productos => {
+        this.productosCarrito = this.carritoService.getAllProductosCarrito(productos);
+        console.log(this.productosCarrito);
       });
   }
 

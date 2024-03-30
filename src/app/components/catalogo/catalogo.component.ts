@@ -4,6 +4,7 @@ import { Producto } from '../../models/producto';
 import { Categoria } from '../../models/categoria';
 import { ProductoService } from '../../services/productoServices';
 import { CategoriaService } from '../../services/categoriaServices';
+import { CarritoService } from '../../services/carritoServices';
 
 @Component({
   selector: 'app-catalogo',
@@ -19,12 +20,13 @@ import { CategoriaService } from '../../services/categoriaServices';
 export class CatalogoComponent implements OnInit {
   productos: Producto[] = [];
   categorias: Categoria[] = [];
+  carritoProductos: number[] = [];
   cantidadString: string = "0"; // Inicializamos como una cadena
   cantidad: number = 0;
 
 
 
-  constructor(private productoService: ProductoService, private categoriaService: CategoriaService) { }
+  constructor(private productoService: ProductoService, private categoriaService: CategoriaService, private carritoService: CarritoService) { }
 
   ngOnInit(): void {
     this.getProductos();
@@ -48,14 +50,18 @@ export class CatalogoComponent implements OnInit {
   }
 
   getCategoriaNombre(categoria_id: number): string {
-    console.log('Categorías cargadas:', this.categorias);
-    console.log('ID de categoría a buscar:', categoria_id);
+   
     const categoria = this.categorias.find(c => c.id === categoria_id);
-    console.log('Categoría encontrada:', categoria);
+   
     return categoria ? categoria.nombre : 'Categoría Desconocida';
   }
   
-
+  agregarAlCarrito(idProducto: number) {
+    // Agregar el ID del producto al carritoProductos
+    this.carritoService.agregarAlCarrito(idProducto);
+    console.log("Producto agregado al carrito:", idProducto);
+  }
+  
 
 
 
