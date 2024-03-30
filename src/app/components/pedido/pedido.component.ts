@@ -1,6 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, OnInit  } from '@angular/core';
+import { Pedido } from '../../models/pedido';
 import { Producto } from '../../models/producto';
+import { DetPedido } from '../../models/detPedido';
 import { ProductoService } from '../../services/productoServices';
 import { CarritoService } from '../../services/carritoServices';
 
@@ -38,8 +40,19 @@ export class PedidoComponent implements OnInit {
       });
   }
 
+  incrementarCantidad(producto: Producto,pedido: Pedido, detpedido: DetPedido) {
+    if (producto.id === detpedido.producto_id && pedido.id === detpedido.pedido_id) {
+      detpedido.cantidad = (detpedido.cantidad || 0) + 1;
+    }
+  }
 
-
+  decrementarCantidad(producto: Producto,pedido: Pedido, detpedido: DetPedido) {
+    if (producto.id === detpedido.producto_id && pedido.id === detpedido.pedido_id) {
+    if (detpedido.cantidad && detpedido.cantidad > 1) {
+      detpedido.cantidad -= 1;
+    }
+  }
+  }
 
   //add products
 
