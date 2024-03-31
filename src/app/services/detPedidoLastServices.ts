@@ -1,4 +1,3 @@
-
 // producto.service.ts
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
@@ -14,7 +13,7 @@ import { catchError, map, tap } from 'rxjs/operators';
 
 
 export class DetPedidoLastService {
-  private apiUrl = 'http://127.0.0.1:8000/api/lastdetpedidos';
+  private apiUrl = 'https://sushi-back-services.onrender.com/api/lastdetpedidos';
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -30,3 +29,4 @@ export class DetPedidoLastService {
 
 
 }
+

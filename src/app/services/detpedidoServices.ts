@@ -12,7 +12,7 @@ import { catchError, map, tap } from 'rxjs/operators';
 
 
 export class DetPedidoService {
-  private apiUrl = 'http://127.0.0.1:8000/api/detpedidos';
+  private apiUrl = 'https://sushi-back-services.onrender.com/api/detpedidos';
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -25,9 +25,9 @@ export class DetPedidoService {
     getDetPedidos(): Observable<DetPedido[]> {
       return this.http.get<DetPedido[]>(this.apiUrl);
     }
-    
 
-    
+
+
 
   //get Producto by id
   getDetPedido<Data>(id: number): Observable<DetPedido> {

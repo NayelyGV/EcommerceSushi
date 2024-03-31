@@ -12,7 +12,7 @@ import { catchError, map, tap } from 'rxjs/operators';
 
 
 export class ProductoService {
-  private apiUrl = 'http://127.0.0.1:8000/api/productos';
+  private apiUrl = 'https://sushi-back-services.onrender.com/api/productos';
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })

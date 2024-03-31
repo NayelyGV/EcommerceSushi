@@ -12,7 +12,7 @@ import { catchError, map, tap } from 'rxjs/operators';
 
 
 export class CategoriaService {
-  private apiUrl = 'http://127.0.0.1:8000/api/categorias';
+  private apiUrl = 'https://sushi-back-services.onrender.com/api/categorias';
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -25,9 +25,9 @@ export class CategoriaService {
     getCategorias(): Observable<Categoria[]> {
       return this.http.get<Categoria[]>(this.apiUrl);
     }
-    
 
-    
+
+
 
   //get Producto by id
   getCategoria<Data>(id: number): Observable<Categoria> {
@@ -57,7 +57,7 @@ export class CategoriaService {
   }
 
 
- 
+
 
 }
 
