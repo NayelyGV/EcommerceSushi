@@ -13,7 +13,7 @@ import { Pedido } from '../models/pedido';
 
 
 export class PedidoService {
-  private apiUrl = 'http://127.0.0.1:8000/api/pedidos';
+  private apiUrl = 'https://sushi-back-services.onrender.com/api/pedidos';
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
