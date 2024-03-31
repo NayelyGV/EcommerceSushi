@@ -1,9 +1,4 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "market/**",
-      "use": "@vercel/static-build"
-    }
-  ]
+  "version": 2
+
 }
